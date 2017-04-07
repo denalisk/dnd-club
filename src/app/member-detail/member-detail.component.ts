@@ -31,7 +31,17 @@ export class MemberDetailComponent implements OnInit {
   }
 
   isAdmin() {
-    return (this.urlString.slice(0,5) === 'admin');
+    return (this.urlString.slice(0,5) === '/admi');
+  }
+
+  toggleAdminRoute() {
+    let routeString = '';
+    if (this.isAdmin()) {
+      routeString = this.urlString.slice(6);
+    } else {
+      routeString = 'admin/' + this.urlString
+    }
+    this.router.navigate(['/' + routeString]);
   }
 
 }

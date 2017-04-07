@@ -1,8 +1,8 @@
 <div class="panel panel-warning">
   <div class="panel-heading">
     <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
-    <a routerLink="members/admin"><button type="button" class="btn btn-primary align-right">Admin View</button></a>
-    <a routerLink="members"><button type="button" class="btn btn-primary align-right">User View</button></a>
+    <button type="button" class="btn btn-primary align-right" *ngIf="isAdmin() === false" (click)="toggleAdminRoute()">Admin View</button>
+    <button type="button" class="btn btn-primary align-right" *ngIf="isAdmin()" (click)="toggleAdminRoute()">User View</button>
   </div>
   <div class="panel-body">
     <p>
