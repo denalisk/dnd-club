@@ -5,6 +5,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { MemberService } from '../member.service';
 import { classList } from '../classlist';
 
+import { Member } from '../member.model';
+import { memberList } from '../mock-data';
+
 @Component({
   selector: 'app-member-list',
   templateUrl: './member-list.component.html',
@@ -18,12 +21,15 @@ export class MemberListComponent implements OnInit {
   public classes: string[] = classList;
   public targetClass: string = 'Any';
 
+  public members2: Member[];
 
-  constructor(private router: Router, private memberService: MemberService) { }
+
+  constructor(private router: Router, private memberService: MemberService, private angularFire: AngularFire) { }
 
   ngOnInit() {
     this.members = this.memberService.getMembers();
     this.urlString = this.router.url;
+    this.memberService.getMembers().subscribe(data => {this.members2 = data;console.log(this.members2);})
   }
 
   dataAlert() {
