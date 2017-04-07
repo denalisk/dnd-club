@@ -1,5 +1,5 @@
 <div class="panel panel-warning">
-  <div class="panel-heading" (click)="memberDetailClick(member)">
+  <div class="panel-heading">
     <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
   </div>
   <div class="panel-body">
@@ -10,5 +10,6 @@
     <p>
       {{(member | async)?.backstory}}
     </p>
+    <app-edit-member [memberId]="memberId" [targetMember]="(member | async)" [heldData]="(member | async)"></app-edit-member>
   </div>
 </div>

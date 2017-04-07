@@ -2,12 +2,12 @@
   <label for="name">New Member Name:</label>
   <input type="text" name="name" class="form-control" #name>
   <label for="characterName">Character Name:</label>
-  <input type="text" characterName="characterName" class="form-control" #characterName>
+  <input type="text" name="characterName" class="form-control" #characterName>
   <label for="playerClass">Character Class:</label>
-  <input type="text" playerClass="playerClass" class="form-control" #playerClass>
+  <input type="text" name="playerClass" class="form-control" #playerClass>
   <label for="race">Character Race:</label>
-  <input type="text" race="race" class="form-control" #race>
+  <input type="text" name="race" class="form-control" #race>
   <label for="backstory">Backstory:</label>
-  <input type="text" backstory="backstory" class="form-control" #backstory>
+  <input type="text" name="backstory" class="form-control" #backstory>
   <button type="button" (click)="saveMember(name.value, playerClass.value, characterName.value, race.value, backstory.value)">Save Player</button>
 </div>

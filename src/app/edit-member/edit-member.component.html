@@ -1,14 +1,29 @@
 <h4>Edit {{member.name}}</h4>
-<div class="form-group">
+<div *ngIf="isEditing" class="form-group">
+  <div class="jumbotron">
+    <h1>Debugging thing</h1>
+    currently able to pass {{targetMember.name}}
+    <button type="button" name="button" (click)="alertData()">Check data</button>
+  </div>
+
   <label for="name">Member Name:</label>
-  <input type="text" name="name" class="form-control" #name>
+  <input type="text" name="name" class="form-control" [value]="targetMember.name" (input)="targetMember.name = $event.target.value">
   <label for="characterName">Character Name:</label>
-  <input type="text" characterName="characterName" class="form-control" #characterName>
+  <input type="text" name="characterName" class="form-control" [(ngModel)]="targetMember.characterName">
   <label for="playerClass">Character Class:</label>
-  <input type="text" playerClass="playerClass" class="form-control" #playerClass>
+  <input type="text" name="playerClass" class="form-control" [(ngModel)]="targetMember.playerClass">
   <label for="race">Character Race:</label>
-  <input type="text" race="race" class="form-control" #race>
+  <input type="text" name="race" class="form-control" [(ngModel)]="targetMember.race">
   <label for="backstory">Backstory:</label>
-  <input type="text" backstory="backstory" class="form-control" #backstory>
-  <button type="button">Save Player</button>
+  <input type="text" name="backstory" class="form-control" [(ngModel)]="targetMember.backstory">
+  <label for="level">Level:</label>
+  <input type="number" name="level" class="form-control" [(ngModel)]="targetMember.level">
+  <label for="experience">Experience:</label>
+  <input type="number" name="experience" class="form-control" [(ngModel)]="targetMember.experience">
+
+
+
 </div>
+<button type="button" class="btn btn-info" (click)="editButtonClick()" *ngIf="isEditing === false">Edit Member</button>
+<button type="button" class="btn btn-info" (click)="editButtonClick()" *ngIf="isEditing ">Cancel Editing</button>
+<button type="button" class="btn btn-info" (click)="saveButtonClick()" *ngIf="isEditing ">Save Changes</button>

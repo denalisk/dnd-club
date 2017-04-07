@@ -22,19 +22,19 @@ export class MemberService {
     this.members.push(newMember);
   }
 
-  updateMember(targetMember) {
-    let dbMember = this.getMemberById(targetMember.$key);
-    dbMember.update({name: targetMember.name,
-    characterName: targetMember.characterName,
-    playerClass: targetMember.playerClass,
-    race: targetMember.race,
-    level: targetMember.level,
-    experience: targetMember.experience,
-    backstory: targetMember.backstory});
+  updateMember(updatedMember: Member, targetId: string) {
+    let dbMember = this.getMemberById(targetId);
+    dbMember.update({name: updatedMember.name,
+    characterName: updatedMember.characterName,
+    playerClass: updatedMember.playerClass,
+    race: updatedMember.race,
+    level: updatedMember.level,
+    experience: updatedMember.experience,
+    backstory: updatedMember.backstory});
   }
 
-  deleteMember(targetMember) {
-    let dbMember = this.getMemberById(targetMember.$key);
+  deleteMember(targetId: string) {
+    let dbMember = this.getMemberById(targetId);
     dbMember.remove();
   }
 
