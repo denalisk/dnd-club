@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { FirebaseObjectObservable } from 'angularfire2';
 import { Member } from '../member.model';
 
 @Component({
@@ -9,9 +11,13 @@ import { Member } from '../member.model';
 export class MemberTileComponent implements OnInit {
   @Input() member: Member;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  memberDetailClick(clickedMember: any) {
+    this.router.navigate(['members', clickedMember.$key]);
   }
 
 }
