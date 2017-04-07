@@ -1,1 +1,29 @@
-<app-create-member></app-create-member>
+<div class="jumbotron">
+  <h1>Welcome to your local DnD player database!</h1>
+</div>
+<h3>Here, you can view and edit local players in your DnD group</h3>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Add a new member!</h3>
+      </div>
+      <div class="panel-body">
+        <app-create-member></app-create-member>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Check out our other pages!</h3>
+      </div>
+      <div class="panel-body">
+        <a routerLink="members"><h3>View Existing Members!</h3></a>
+        <a routerLink="about"><h3>Check out our info page!</h3></a>
+      </div>
+    </div>
+  </div>
+
+</div>
