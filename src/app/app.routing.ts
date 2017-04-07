@@ -9,26 +9,28 @@ import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent;
+    component: HomeComponent
   },
   {
     path: 'members/:id',
-    component: MemberDetailComponent;
+    component: MemberDetailComponent
   },
   {
     path: 'members',
-    component: MemberListComponent;
+    component: MemberListComponent
   },
   {
     path: 'about',
-    component: AboutComponent;
+    component: AboutComponent
   },
   {
     path: 'members/:id/admin',
-    component: MemberDetailComponent;
+    component: MemberDetailComponent
   },
   {
     path: 'members/admin',
-    component: MemberListComponent;
+    component: MemberListComponent
   }
-]
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

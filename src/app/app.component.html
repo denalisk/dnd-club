@@ -1,3 +1,16 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Home</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="about/">About</a></li>
+      <li><a routerLink="members/">Current Members</a></li>
+      <li *ngIf="urlString === '/members'"><a routerLink="members/admin">Admin View</a></li>
+      <li *ngIf="urlString === '/members/admin'"><a routerLink="members">Admin View</a></li>
+    </ul>
+  </div>
+</nav>
 <h1>
   {{title}}
 </h1>
