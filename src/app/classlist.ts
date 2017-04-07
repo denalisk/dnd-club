@@ -1,5 +1,4 @@
 export const classList: string[] = [
-  "Any",
   "Barbarian",
   "Wizard",
   "Cleric",

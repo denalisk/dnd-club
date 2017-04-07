@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FirebaseObjectObservable } from 'angularfire2';
 import { MemberService } from '../member.service';
 import { Member } from '../member.model';
+import { classList } from '../classlist';
 
 @Component({
   selector: 'app-edit-member',
@@ -15,6 +16,8 @@ export class EditMemberComponent implements OnInit {
   @Input() targetMember: Member;
   @Input() heldData: Member;
   @Input() memberId: string;
+  public newClass: string;
+  public classes: string[] = classList;
 
 
   constructor(private memberService: MemberService, private router: Router) { }

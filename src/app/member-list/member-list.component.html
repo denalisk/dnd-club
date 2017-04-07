@@ -9,9 +9,10 @@
         <select class="form-control" (input)="targetClass = $event.target.value" [value]="targetClass">
           <option *ngFor="let class of classes">{{class}}</option>
         </select>
+        <hr>
+        <button type="button" (click)="targetClass = 'Any'" class="btn btn-primary">Remove Filter</button>
       </div>
     </div>
-    <button type="button" (click)="dataAlert()">Get the class!</button>
   </div>
   <div *ngFor="let member of members2 | classPipe: targetClass">
     <app-member-tile [member]="member"></app-member-tile>

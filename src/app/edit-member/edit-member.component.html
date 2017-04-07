@@ -6,9 +6,9 @@
   <label for="characterName">Character Name:</label>
   <input type="text" name="characterName" class="form-control" [(ngModel)]="targetMember.characterName">
   <label for="playerClass">Character Class:</label>
-  <input type="text" name="playerClass" class="form-control" [(ngModel)]="targetMember.playerClass">
-  <label for="race">Character Race:</label>
-  <input type="text" name="race" class="form-control" [(ngModel)]="targetMember.race">
+  <select class="form-control" (input)="targetMember.playerClass = $event.target.value" [value]="targetMember.playerClass">
+    <option *ngFor="let class of classes">{{class}}</option>
+  </select>
   <label for="backstory">Backstory:</label>
   <input type="text" name="backstory" class="form-control" [(ngModel)]="targetMember.backstory">
   <label for="level">Level:</label>
