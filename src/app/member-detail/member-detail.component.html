@@ -1,8 +1,8 @@
 <div class="panel panel-warning">
   <div class="panel-heading">
-    <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
     <button type="button" class="btn btn-primary align-right" *ngIf="isAdmin() === false" (click)="toggleAdminRoute()">Admin View</button>
     <button type="button" class="btn btn-primary align-right" *ngIf="isAdmin()" (click)="toggleAdminRoute()">User View</button>
+    <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
   </div>
   <div class="panel-body">
     <p>
