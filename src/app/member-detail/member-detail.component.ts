@@ -30,4 +30,8 @@ export class MemberDetailComponent implements OnInit {
     this.urlString = this.router.url;
   }
 
+  isAdmin() {
+    return (this.urlString.slice(0,5) === 'admin');
+  }
+
 }

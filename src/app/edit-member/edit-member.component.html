@@ -1,11 +1,6 @@
-<h4>Edit {{member.name}}</h4>
+<button type="button" class="btn btn-info" (click)="editButtonClick()" *ngIf="isEditing === false">Edit Member</button>
 <div *ngIf="isEditing" class="form-group">
-  <div class="jumbotron">
-    <h1>Debugging thing</h1>
-    currently able to pass {{targetMember.name}}
-    <button type="button" name="button" (click)="alertData()">Check data</button>
-  </div>
-
+  <h4>Edit {{member.name}}</h4>
   <label for="name">Member Name:</label>
   <input type="text" name="name" class="form-control" [value]="targetMember.name" (input)="targetMember.name = $event.target.value">
   <label for="characterName">Character Name:</label>
@@ -20,10 +15,9 @@
   <input type="number" name="level" class="form-control" [(ngModel)]="targetMember.level">
   <label for="experience">Experience:</label>
   <input type="number" name="experience" class="form-control" [(ngModel)]="targetMember.experience">
-
-
-
 </div>
-<button type="button" class="btn btn-info" (click)="editButtonClick()" *ngIf="isEditing === false">Edit Member</button>
-<button type="button" class="btn btn-info" (click)="editButtonClick()" *ngIf="isEditing ">Cancel Editing</button>
-<button type="button" class="btn btn-info" (click)="saveButtonClick()" *ngIf="isEditing ">Save Changes</button>
+<div *ngIf="isEditing">
+  <button type="button" class="btn btn-warning" (click)="editButtonClick()">Cancel Editing</button>
+  <button type="button" class="btn btn-info" (click)="saveButtonClick()">Save Changes</button>
+  <button type="button" class="btn btn-danger" (click)="deleteButtonClick()">Delete Member</button>
+</div>

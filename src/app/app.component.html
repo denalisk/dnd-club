@@ -6,15 +6,11 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="about/">About</a></li>
       <li><a routerLink="members/">Current Members</a></li>
-      <li *ngIf="urlString === '/members'"><a routerLink="members/admin">Admin View</a></li>
-      <li *ngIf="urlString === '/members/admin'"><a routerLink="members">Admin View</a></li>
+      <li *ngIf="isAdmin"><a routerLink="members/admin">User View</a></li>
+      <li *ngIf="isAdmin === false"><a routerLink="members">Admin View</a></li>
     </ul>
   </div>
 </nav>
-<h1>
-  {{title}}
-  Url string is {{urlString | async}}
-</h1>
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div>

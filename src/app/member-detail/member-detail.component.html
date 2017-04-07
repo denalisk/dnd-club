@@ -1,6 +1,8 @@
 <div class="panel panel-warning">
   <div class="panel-heading">
     <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
+    <a routerLink="members/admin"><button type="button" class="btn btn-primary align-right">Admin View</button></a>
+    <a routerLink="members"><button type="button" class="btn btn-primary align-right">User View</button></a>
   </div>
   <div class="panel-body">
     <p>
@@ -10,6 +12,8 @@
     <p>
       {{(member | async)?.backstory}}
     </p>
-    <app-edit-member [memberId]="memberId" [targetMember]="(member | async)" [heldData]="(member | async)"></app-edit-member>
+    <div *ngIf="isAdmin()">
+      <app-edit-member [memberId]="memberId" [targetMember]="(member | async)" [heldData]="(member | async)"></app-edit-member>
+    </div>
   </div>
 </div>

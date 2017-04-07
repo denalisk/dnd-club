@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { FirebaseObjectObservable } from 'angularfire2';
 import { MemberService } from '../member.service';
 import { Member } from '../member.model';
@@ -16,7 +17,7 @@ export class EditMemberComponent implements OnInit {
   @Input() memberId: string;
 
 
-  constructor(private memberService: MemberService) { }
+  constructor(private memberService: MemberService, private router: Router) { }
 
   ngOnInit() {
     this.member = this.memberService.getMemberById(this.memberId);
@@ -31,6 +32,16 @@ export class EditMemberComponent implements OnInit {
       this.targetMember = this.heldData;
     }
     this.isEditing = (!(this.isEditing));
+  }
+
+  saveButtonClick() {
+    this.memberService.updateMember(this.targetMember, this.memberId);
+    this.isEditing = (!(this.isEditing));
+  }
+
+  deleteButtonClick() {
+    this.memberService.deleteMember(this.memberId);
+    this.router.navigate(['members']);
   }
 
 }
