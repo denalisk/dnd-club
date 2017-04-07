@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Member } from '../member.model';
 
 @Component({
   selector: 'app-member-tile',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member-tile.component.css']
 })
 export class MemberTileComponent implements OnInit {
+  @Input() member: Member;
 
   constructor() { }
 
