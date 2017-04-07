@@ -24,7 +24,7 @@
 ## Setup
 
 * Clone this repository
-* From inside the root level of the repository, run npm install and bower install
+* From inside the root level of the repository, run npm install, bower install, and bower install bootstrap
 * Add Firebase:
   * create a new project in your firebase
   * import data from 'src/app/seed-data.json', if desired
