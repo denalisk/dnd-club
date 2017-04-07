@@ -6,7 +6,8 @@
       "playerClass": "Wizard",
       "race": "High Elf",
       "level": 1,
-      "experience": 0
+      "experience": 0,
+      "backstory": "Geo was abandoned as a young elf and wandered the hinterlands until he found a friendly dragon that loved the magic sport of basalbell. The dragon took him in and trained him in the arts of wizardry, and now he seeks glory"
     },
     {
       "name": "Julia Thompson",
@@ -14,7 +15,8 @@
       "playerClass": "Barbarian",
       "race": "Human",
       "level": 1,
-      "experience": 0
+      "experience": 0,
+      "backstory": "Grundlesworth (or Grundle, to his friends and enemies), is a mountain of a man prone to fly off the handle at any perceived slight. The group tolerates him largely because he tolerates a lot of damage. The classic meat shield, motivated by the desire to find more people to kill"
     },
     {
       "name": "Harry Katskills",
@@ -22,15 +24,17 @@
       "playerClass": "Cleric",
       "race": "Dwarf",
       "level": 1,
-      "experience": 0
+      "experience": 0,
+      "backstory": "You wouldn't expect it from the name, but Healy is the biggest murder hobo of the group, constantly trying to set things on fire and attack anything the moves when he gets bored. Doesn't take the healing spells he should"
     },
     {
       "name": "Billy's little Brother",
-      "characterName": "Alvin Thosterhouse",
+      "characterName": "Alvina Thosterhouse",
       "playerClass": "Rogue",
       "race": "Dark Elf",
       "level": 1,
-      "experience": 0
+      "experience": 0,
+      "backstory": "Alvina comes from a wealthy family, but shunned her rich existence to live in the exciting shadow-world of thieves and rogues. She's quick with a knife and quicker with numbers. The de facto leader"
     }
   ]
 }

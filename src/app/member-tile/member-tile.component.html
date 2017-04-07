@@ -7,6 +7,8 @@
       {{member.name}} plays a level {{member.level}} {{member.race}} {{member.class}}.
       They currently have {{member.experience}} experience points.
     </p>
+    <p *ngIf="detail">
+      {{member.description}}
+    </p>
   </div>
-
 </div>

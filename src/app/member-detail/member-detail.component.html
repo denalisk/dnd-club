@@ -1,4 +1,14 @@
-<p>
-  member-detail works!
-  Current route is {{urlString}}
-</p>
+<div class="panel panel-warning">
+  <div class="panel-heading" (click)="memberDetailClick(member)">
+    <h3>{{(member | async)?.name}} - {{(member | async)?.characterName}}</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      {{(member | async)?.name}} plays a level {{(member | async)?.level}} {{(member | async)?.race}} {{(member | async)?.class}}.
+      They currently have {{(member | async)?.experience}} experience points.
+    </p>
+    <p>
+      {{(member | async)?.backstory}}
+    </p>
+  </div>
+</div>
