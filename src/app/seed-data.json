@@ -1,0 +1,36 @@
+{
+  "members": [
+    {
+      "name": "Jerome Higgins",
+      "characterName": "Geo DiMageIo",
+      "class": "Wizard",
+      "race": "High Elf",
+      "level": 1,
+      "experience": 0
+    },
+    {
+      "name": "Julia Thompson",
+      "characterName": "Grundlesworth the Red",
+      "class": "Barbarian",
+      "race": "Human",
+      "level": 1,
+      "experience": 0
+    },
+    {
+      "name": "Harry Katskills",
+      "characterName": "Healy McHealerson",
+      "class": "Cleric",
+      "race": "Dwarf",
+      "level": 1,
+      "experience": 0
+    },
+    {
+      "name": "Billy's little Brother",
+      "characterName": "Alvin Thosterhouse",
+      "class": "Rogue",
+      "race": "Dark Elf",
+      "level": 1,
+      "experience": 0
+    }
+  ]
+}

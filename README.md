@@ -14,6 +14,14 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Adding Firebase
+
+create a new project in your firebase
+import data from 'src/app/seed-data.json'
+on the main page, click "add to my web app" and copy everything inside the {} after "var config ="
+Create the file 'src/app/api-keys.ts' and create this exported object, pasting in the copied text where indicated:
+export var masterFirebaseConfig = {PASTE COPIED TEXT HERE}
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
