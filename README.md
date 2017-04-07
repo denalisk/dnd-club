@@ -1,36 +1,46 @@
-# ClubSite
+# "DnD DB" An exercise in typescript and the Angular2 framework
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+#### _DnD DB_, 04.07.2017
 
-## Development server
+### By _Sam Kirsch_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+#### A simple website built to track a DnD groups players and their most basic attributes. It allows users to add, save, edit, and delete players from a group, and view players in the group sorted by their character class. All data is persistent over firebase.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Specifications
 
-## Build
+* Users may add and save members
+* Users can view existing members
+* Users can sort members by their character class
+* Admin view allows for editing members
+* Admin view allows for deleting members
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+#### Stretch Goals
 
-## Adding Firebase
+* Add additional attributes to characters (Str, Dex, Spells, Feats, etc) to track
+* Create a level-up check on experience modification
 
-create a new project in your firebase
-import data from 'src/app/seed-data.json'
-on the main page, click "add to my web app" and copy everything inside the {} after "var config ="
-Create the file 'src/app/api-keys.ts' and create this exported object, pasting in the copied text where indicated:
-export var masterFirebaseConfig = {PASTE COPIED TEXT HERE}
+## Setup
 
-## Running unit tests
+* Clone this repository
+* From inside the root level of the repository, run npm install and bower install
+* Add Firebase:
+  * create a new project in your firebase
+  * import data from 'src/app/seed-data.json', if desired
+  * on the main page, click "add to my web app" and copy everything inside the {} after "var config ="
+  * Create the file 'src/app/api-keys.ts' and create this exported object, pasting in the copied text where indicated:
+>export var masterFirebaseConfig = {PASTE COPIED TEXT HERE}
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* run ng serve and navigate to http://localhost:4200/
 
-## Running end-to-end tests
+### Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* HTML and CSS
+* TypeScript with Angular2 to manage packages and Firebase for data storage
 
-## Further help
+[github link for this project](https://github.com/denalisk/dnd-club)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##### Copyright (c) 2017 Sam Kirsch.
+
+##### Licensed under the MIT license.
