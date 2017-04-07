@@ -2,3 +2,12 @@
   member-list works!
   Current route is {{urlString}}
 </p>
+
+<div class="">
+  <h2>Current Members:</h2>
+  <div *ngFor="let member of members | async">
+    <member-tile [member]="member"></member-tile>
+  </div>
+
+
+</div>
