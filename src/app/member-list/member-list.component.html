@@ -13,7 +13,7 @@
     </div>
     <button type="button" (click)="dataAlert()">Get the class!</button>
   </div>
-  <div *ngFor="let member of members | async">
+  <div *ngFor="let member of members | async ">
     <app-member-tile [member]="member"></app-member-tile>
   </div>
 
