@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 
 import { routing } from './app.routing';
+import { masterFirebaseConfig } from './api-keys';
 
 import { AppComponent } from './app.component';
 import { MemberListComponent } from './member-list/member-list.component';
@@ -14,8 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { CreateMemberComponent } from './create-member/create-member.component';
 import { HomeComponent } from './home/home.component';
+import { ClassPipe } from './class.pipe';
 
-import { masterFirebaseConfig } from './api-keys';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     AboutComponent,
     EditMemberComponent,
     CreateMemberComponent,
-    HomeComponent
+    HomeComponent,
+    ClassPipe
   ],
   imports: [
     BrowserModule,
