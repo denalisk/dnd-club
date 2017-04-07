@@ -30,7 +30,12 @@ export class MemberService {
     race: targetMember.race,
     level: targetMember.level,
     experience: targetMember.experience,
-    backstory: targetMember.backstory})
+    backstory: targetMember.backstory});
+  }
+
+  deleteMember(targetMember) {
+    let dbMember = this.getMemberById(targetMember.$key);
+    dbMember.remove();
   }
 
 }
