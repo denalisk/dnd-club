@@ -3,3 +3,7 @@
 body {
   background-color: salmon !important;
 }
+
+div.jumbotron {
+  background-color: #efe2bf;
+}
