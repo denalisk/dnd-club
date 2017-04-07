@@ -9,5 +9,5 @@
   <input type="text" race="race" class="form-control" #race>
   <label for="backstory">Backstory:</label>
   <input type="text" backstory="backstory" class="form-control" #backstory>
-  <button type="button">Save Player</button>
+  <button type="button" (click)="saveMember(name.value, playerClass.value, characterName.value, race.value, backstory.value)">Save Player</button>
 </div>
